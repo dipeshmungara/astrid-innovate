@@ -182,3 +182,5 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Create Home & Blog page and set auto
  */
 require get_template_directory() . '/inc/create-pages.php';
+
+require get_template_directory(). '/inc/theme-options.php';

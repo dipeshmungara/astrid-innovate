@@ -29,9 +29,13 @@ get_header();
 			endif;
 
 			/* Start the Loop */
+			?>
+			<div class="container mx-auto">
+				<div class="grid grid-cols-3 gap-4 mt-20 mb-20">
+			<?php
 			while ( have_posts() ) :
 				the_post();
-
+				
 				/*
 				 * Include the Post-Type-specific template for the content.
 				 * If you want to override this in a child theme, then include a file
@@ -40,7 +44,10 @@ get_header();
 				get_template_part( 'template-parts/content', get_post_type() );
 
 			endwhile;
-
+			?>
+				</div>
+		</div>
+			<?php
 			the_posts_navigation();
 
 		else :
@@ -53,5 +60,5 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();
